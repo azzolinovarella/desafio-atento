@@ -2,6 +2,16 @@
 
 Este repositório contém os arquivos utilizados para o desenvolvimento do desafio da Atento desenvolvido como uma etapa do processo seletivo da empresa.
 
+## Instruções de execução
+
+Para este desafio, dividiu-se os processo em 3 notebooks (todos disponíveis no repositório `notebooks`): 
+
+- `01-DataPreProcessing.ipynb`: Contém a etapa de pré-processamento dos dados e inferência dos targets por meio de um LLM (usado posteriormente para o treinamento de um outro modelo).
+- `02-ModelTraining.ipynb`: Contém a etapa de treinamento e seleção de um modelo de análise de sentimento a partir dos targets inferidos no notebook anterior.
+- `03-ValidationDataAnalysis.ipynb`: Contém a etapa da inferência dos sentimentos na base de validação e a modelagem de tópicos desta mesma base.
+
+Em cada um dos notebooks citados acima encontram-se, além do código, todo o processo comentado e documentado.
+
 ---
 
 ## Objetivo
@@ -51,13 +61,3 @@ O objetivo deste desafio é avaliar as habilidades de um consultor de Data Scien
 
 8. Apresentação dos resultados.
 
----
-## ToDo
-
-[X] Usar algum modelo da HuggingFace (e.g. [bertweet-base-sentiment-analysis](https://huggingface.co/finiteautomata/bertweet-base-sentiment-analysis) que aborde [análise de sentimentos via texto](https://huggingface.co/blog/sentiment-analysis-python)  para estimar a variável target da base de treino
-[ ] A partir da nova base de dados gerada (com targets), criar um algoritmo de classificação.
-[ ] Usar algum modelo da HuggingFace (e.g. ) que aborda [modelagem de tópicos](https://huggingface.co/blog/bertopic) para analisar os comentários.
-[ ] Utilizar o algoritmo de classificação na base de validação.
-[ ] (OPT) Criar uma API em Flask que recebe o texto e traz a classe
-[ ] (OPT) Criar um APP com Streamlit para mostrar os resultados de forma mais visual
-[ ] (OPT) Encapsular tudo em Docker.
